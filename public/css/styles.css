@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Imprima&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --font_titulos: "Bebas Neue", sans-serif;
+  --font_regular_texts: "Imprima", sans-serif;
+}
+
+html, body {
+  height: 100vh;
+}
+
+.layout_header {
+  width: calc(100% - 64px);
+  height: 50px;
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  padding: 0px 30px;
+}
+.layout_header .logo {
+  width: 80px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.layout_header .logo svg {
+  position: absolute;
+  width: 70%;
+  top: -214px;
+  left: 0;
+}
+.layout_header h1 {
+  font-family: var(--font_titulos);
+  margin: 0px 16px;
+}
+.layout_header .user_header {
+  gap: 5px;
+  margin: 0px 0px 0px auto;
+  font-family: var(--font_regular_texts);
+  font-size: 1em;
+}
+.layout_header .user_header a {
+  color: black;
+  text-decoration: none;
+}
+.layout_header .user_header a:hover {
+  text-decoration: underline;
+}
+.layout_header .user_header a:visited {
+  color: black;
+}
+
+.layout_tela {
+  border: 2px solid;
+  overflow: auto;
+  height: calc(100% - 110px);
+}
+
+.layout_footer {
+  width: calc(100% - 4px);
+  height: 50px;
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+}
+.layout_footer h1 {
+  margin: auto;
+}
+
+.form_criar_loja {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  max-width: 400px;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: auto;
+  border: 2px solid;
+  padding: 10px;
+  font-size: 1.3em;
+  gap: 5px;
+  font-family: var(--font_regular_texts);
+}
+.form_criar_loja input {
+  width: 70%;
+  padding: 3px;
+}
+.form_criar_loja textarea {
+  padding: 3px;
+}
+.form_criar_loja .btns-form {
+  width: 70%;
+  text-align: center;
+}
+.form_criar_loja .erro_form {
+  font-size: 10px;
+  color: red;
+}/*# sourceMappingURL=styles.css.map */

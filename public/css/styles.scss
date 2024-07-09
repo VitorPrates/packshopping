@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Imprima&display=swap');
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+}
+:root
+{
+    --font_titulos: "Bebas Neue", sans-serif;
+    --font_regular_texts: "Imprima", sans-serif;
+}
+html,body
+{
+    height: 100vh;
+}
+.layout_header
+{
+    width: calc(100% - 64px);
+    height: 50px;
+    // background-color: green;
+    border: 2px solid;
+    display: flex;
+    align-items: center;
+    padding: 0px 30px;
+    .logo
+    {
+        width: 80px;
+        height: 100%;
+        overflow: hidden;
+        // border: 2px solid;
+        position: relative;
+        
+        svg
+        {
+            position: absolute;
+            width: 70%;
+            top: -214px;
+            left: 0;
+        }
+    }
+    h1
+    {
+        font-family: var(--font_titulos);
+        margin: 0px 16px;
+    }
+    .user_header
+    {
+        gap: 5px;
+        margin: 0px 0px 0px auto;
+        font-family: var(--font_regular_texts);
+        font-size: 1em;
+        a
+        {
+            color: black;
+            text-decoration: none;
+        }
+        a:hover
+        {
+            text-decoration: underline;
+        }
+    }
+    .user_header a:visited
+    {
+        color: black;
+    }
+}
+.layout_tela
+{
+    border: 2px solid;
+    overflow: auto;
+    height: calc(100% - 110px);
+}
+.layout_footer
+{
+    width: calc(100% - 4px);
+    height: 50px;
+    border: 2px solid;
+    display: flex;
+    align-items: center;
+    h1
+    {
+        margin: auto;
+    }
+}
+
+.form_criar_loja
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    max-width: 400px;
+    height: fit-content;
+    margin: auto;
+    border: 2px solid;
+    padding: 10px;
+    font-size: 1.3em;
+    gap: 5px;
+    font-family: var(--font_regular_texts);
+    input
+    {
+        width: 70%;
+        padding: 3px;
+    }
+    textarea
+    {
+        padding: 3px;
+    }
+    .btns-form
+    {
+        width: 70%;
+        // display: flex;
+        text-align: center;
+        // border: 2px solid;
+    }
+    .erro_form
+    {
+        font-size: 10px;
+        color: red;
+    }
+}

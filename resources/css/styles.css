@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Imprima&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --font_titulos: "Bebas Neue", sans-serif;
+  --font_regular_texts: "Imprima", sans-serif;
+}
+
+.layout_header {
+  width: calc(100% - 64px);
+  height: 100px;
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  padding: 0px 30px;
+}
+.layout_header .logo {
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+.layout_header .logo svg {
+  position: absolute;
+  width: 130%;
+  top: -200px;
+  left: -10px;
+}
+.layout_header h1 {
+  font-family: var(--font_titulos);
+  margin: 0px 16px;
+}
+.layout_header .user_header {
+  gap: 5px;
+  margin: 0px 0px 0px auto;
+  font-family: var(--font_regular_texts);
+  font-size: 1em;
+}
+.layout_header .user_header a {
+  color: black;
+  text-decoration: none;
+}
+.layout_header .user_header a:hover {
+  text-decoration: underline;
+}
+.layout_header .user_header a:visited {
+  color: black;
+}/*# sourceMappingURL=styles.css.map */
