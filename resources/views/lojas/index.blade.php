@@ -4,13 +4,17 @@
     @include('partials._search')
     @unless(count($listas) == 0)
     
-    @foreach($listas as $item)
-    <x-listando-card :item="$item"/>
-    @endforeach
+    <div class="cards-index">
+        @foreach($listas as $item)
+        <x-listando-card :item="$item"/>
+        @endforeach
+    </div>
     
     @else
     <p>Sem listas aqui :(</p>
-    
     @endunless
+    <div class="btn-page">
+        {{$listas->links()}}
+    </div>
 </x-layout>
     

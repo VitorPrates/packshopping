@@ -44,4 +44,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    //relações loja-user
+    public function lojas()
+    {
+        return $this->hasMany(listando::class,'user_id');
+    }
 }

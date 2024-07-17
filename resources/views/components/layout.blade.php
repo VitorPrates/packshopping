@@ -9,6 +9,7 @@
     {{-- <link rel="stylesheet" href="resources/css/styles.css"> --}}
     {{-- <link rel="stylesheet" href="css/styles.css"> --}}
     <link rel="stylesheet" href={{ asset('css/styles.css') }}>
+    <script src="//unpkg.com/alpinejs" defer></script>
 </head>
 <body>
     <header class="layout_header">
@@ -24,9 +25,19 @@
                 </svg>
         </div>
         <a href="/"><h1>Packshop</h1></a>
+
         <div class="user_header">
-            <a href="">Novo usuário</a>
-            <a href="">Login</a>
+            @auth
+            <span>Olá {{auth() -> user()->name}}!</span>
+            <a href="/lojas/controle">Suas lojas</a>
+            <form action="/logout" method="POST">
+                @csrf
+                <button type="submit">Sair</button>
+            </form>
+            @else
+            <a href="/register">Novo usuário</a>
+            <a href="/login">Login</a>
+            @endauth
         </div>
     </header>
     {{-- VIEW OUTPUT --}}
@@ -37,6 +48,7 @@
     </div>
     <footer class="layout_footer">
         <h1>footing</h1>
+        <x-flash-message/>
     </footer>
 </body>
 </html>

@@ -12,6 +12,7 @@
 
 html, body {
   height: 100vh;
+  font-family: var(--font_regular_texts);
 }
 
 .layout_header {
@@ -43,6 +44,9 @@ html, body {
   margin: 0px 0px 0px auto;
   font-family: var(--font_regular_texts);
   font-size: 1em;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
 }
 .layout_header .user_header a {
   color: black;
@@ -101,4 +105,72 @@ html, body {
 .form_criar_loja .erro_form {
   font-size: 10px;
   color: red;
+}
+
+.btn-page {
+  align-items: center;
+  text-align: center;
+  margin: auto 0px 0px 0px;
+  display: flex;
+  position: relative;
+  top: 20%;
+  justify-content: center;
+}
+
+.cards-index {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.teste_card {
+  flex: 1 1 calc(50% - 16px);
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid;
+  gap: 5px;
+  margin: 5px;
+}
+.teste_card img {
+  width: calc(20% - 10px);
+  height: 100px;
+  border: 2px solid;
+}
+.teste_card h1 {
+  margin: 0px 0px auto 0px;
+  text-align: center;
+  width: 80%;
+}
+.teste_card a {
+  text-decoration: none;
+  color: black;
+}
+.teste_card ul li {
+  border: 2px solid blue;
+  color: blue;
+  border-radius: 10px;
+  padding: 0px 3px;
+  display: inline-block;
+  background-color: rgba(0, 255, 255, 0.356);
+}
+
+.Register-form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  max-width: 300px;
+  border: 2px solid;
+  margin: auto;
+}
+.Register-form .btns {
+  margin: 5px;
+}
+.Register-form input {
+  padding: 2px 5px;
+}
+
+@media (max-width: 768px) {
+  .teste_card {
+    flex: 1 1 100%; /* 1 card por linha em telas menores */
+  }
 }/*# sourceMappingURL=styles.css.map */

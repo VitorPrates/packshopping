@@ -14,6 +14,7 @@
 html,body
 {
     height: 100vh;
+    font-family: var(--font_regular_texts);
 }
 .layout_header
 {
@@ -51,6 +52,8 @@ html,body
         margin: 0px 0px 0px auto;
         font-family: var(--font_regular_texts);
         font-size: 1em;
+        width: fit-content;
+        display: flex;
         a
         {
             color: black;
@@ -65,12 +68,14 @@ html,body
     {
         color: black;
     }
+    
 }
 .layout_tela
 {
     border: 2px solid;
     overflow: auto;
     height: calc(100% - 110px);
+    
 }
 .layout_footer
 {
@@ -119,5 +124,98 @@ html,body
     {
         font-size: 10px;
         color: red;
+    }
+}
+.btn-page
+{
+    // background-color: yellow;
+    // height: fit-content;
+    align-items: center;
+    text-align: center;
+    margin: auto 0px 0px 0px;
+    display: flex;
+    position: relative;
+    top: 20%;
+    justify-content: center;
+}
+.cards-index
+{
+    // background-color: yellow;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.teste_card
+{
+    flex: 1 1 calc(50% - 16px);
+    // background-color: green;
+    display: flex;
+    flex-wrap: wrap;
+    // flex-direction: column;
+    border: 2px solid;
+    gap: 5px;
+    margin: 5px;
+    img
+    {
+        // display: inline;
+        width: calc(20% - 10px);
+        height: 100px;
+        border: 2px solid;
+    }
+    h1
+    {
+        // display: inline;
+        margin: 0px 0px auto 0px;
+        text-align: center;
+        // background-color: green;
+        width: 80%;
+        // margin: auto;
+    }
+    a
+    {
+        text-decoration: none;
+        color: black;
+    }
+    a:visited
+    {
+
+    }
+    ul
+    {
+        li
+        {
+            border: 2px solid blue;
+            color: blue;
+            border-radius: 10px;
+            padding: 0px 3px;
+
+            display: inline-block;
+            background-color: rgba(0, 255, 255, 0.356);
+        }
+    }
+}
+
+.Register-form
+{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    max-width: 300px;
+    border: 2px solid;
+    margin: auto;
+    .btns
+    {
+        margin: 5px;
+    }
+    input
+    {
+        padding: 2px 5px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .teste_card {
+        flex: 1 1 100%; /* 1 card por linha em telas menores */
     }
 }
