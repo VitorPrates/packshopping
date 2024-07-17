@@ -24,12 +24,16 @@ class listando extends Model
              ->orwhere('local', 'like','%'.request('search').'%')
              ->orwhere('tags', 'like','%'.request('search').'%');
         }
-
     }
 
     //relações loja-user
     public function user()
     {
         return $this->belongsTo(User::class,'user_id');
+    }
+    public function scopebuscarLoja($query)
+    {
+        // return $query -> where('title','like', '%'.request($query).'%');
+        return LISTANDO::find(1);
     }
 }

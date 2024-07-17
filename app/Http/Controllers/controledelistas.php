@@ -58,7 +58,7 @@ class controledelistas extends Controller
         }
         
         $formFields['user_id'] = auth()->id();
-        
+
         listando::create($formFields);
 
         // Session::flash('message','Loja criada!');
@@ -77,10 +77,10 @@ class controledelistas extends Controller
     public function update(Request $request, listando $lista, $listando)
     {
         //logado é o dono
-        dd($lista);
-        if($lista->user_id != auth()->id())
+        // dd($lista);
+        if(listando::find($listando)->user_id !== auth()->id())
         {
-            abort(403,'Ação não autorizada');
+            return abort(403,'Ação não autorizada');
         }
 
         $formFields = $request -> validate([
@@ -109,12 +109,14 @@ class controledelistas extends Controller
     }
 
     //deletar
-    public function deletarLoja(Request $req, listando $lista, $listando)
+    public function deletarLoja(Request $req, listando $lista, $listando, User $use)
     {
-        dd($lista);
-        if($lista->user_id != auth()->id())
+        // dd($lista->scopebuscarLoja($listando));
+        // dd(listando::find($listando)->user_id);
+
+        if(listando::find($listando)->user_id !== auth()->id())
         {
-            abort(403,'Ação não autorizada');
+            return abort(403,'Ação não autorizada');
         }
 
         $item = $lista -> find($listando);
