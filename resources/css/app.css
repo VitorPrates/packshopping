@@ -1,4 +1,4 @@
-h1
-{
-    color: green;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("~bootstrap/css/bootstrap.min.css");
