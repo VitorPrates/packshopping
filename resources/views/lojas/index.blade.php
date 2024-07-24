@@ -11,7 +11,7 @@
     </div>
     
     @else
-    <p>Sem listas aqui :(</p>
+    <p>Sem Lojas :(</p>
     @endunless
     <div class="btn-page">
         {{$listas->links()}}

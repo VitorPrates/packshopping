@@ -64,6 +64,8 @@ html, body {
   border: 2px solid;
   overflow: auto;
   height: calc(100% - 100px);
+  display: flex;
+  flex-direction: column;
 }
 
 .layout_footer {
@@ -83,11 +85,23 @@ html, body {
   vertical-align: auto;
 }
 
+.index_pesquisa {
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
 .index_pesquisa input {
   border-radius: 50px;
   min-height: 30px;
   padding: 0px 10px;
   font-size: 1em;
+  outline: 2px solid;
+  width: 80%;
+}
+.index_pesquisa button {
+  position: absolute;
+  top: 5px;
+  right: 11%;
 }
 
 .form_criar_loja {
@@ -122,19 +136,95 @@ html, body {
 }
 
 .btn-page {
+  background-color: yellow;
   align-items: center;
   text-align: center;
-  margin: auto 0px 0px 0px;
+  margin: auto 0px 0px auto;
   display: flex;
-  position: relative;
-  top: 20%;
-  justify-content: center;
 }
 
 .cards-index {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.container-loja-escolhida {
+  background-color: rgb(255, 203, 197);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container-loja-escolhida .header_loja {
+  display: flex;
+  border: 2px solid;
+}
+.container-loja-escolhida .header_loja img {
+  border-right: 2px solid;
+}
+.container-loja-escolhida .header_loja h1 {
+  margin: auto;
+}
+.container-loja-escolhida .main_loja {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.container-loja-escolhida .main_loja .categorias_loja {
+  width: 129.5px;
+  height: 100%;
+  border-right: 2px solid;
+}
+.container-loja-escolhida .main_loja .categorias_loja ul {
+  width: 100%;
+}
+.container-loja-escolhida .main_loja .categorias_loja ul a {
+  text-decoration: none;
+}
+.container-loja-escolhida .main_loja .categorias_loja ul a li {
+  margin: auto;
+  padding-left: 5px;
+  font-size: 1.2em;
+  border-bottom: 2px solid;
+  color: black;
+  transition: 0.1s ease-out;
+}
+.container-loja-escolhida .main_loja .categorias_loja ul a li:hover {
+  padding-left: 20px;
+}
+.container-loja-escolhida .main_loja .produtos_loja {
+  width: calc(100% - 149.5px);
+  overflow-y: auto;
+  padding: 10px;
+}
+.container-loja-escolhida .main_loja .produtos_loja .container_product_loja {
+  width: 140px;
+  height: 170px;
+  border: 2px solid;
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+}
+.container-loja-escolhida .main_loja .produtos_loja .container_product_loja img {
+  width: 70%;
+  height: 80px;
+  border: 1px solid;
+  margin: auto;
+  text-align: center;
+}
+.container-loja-escolhida .main_loja .produtos_loja .container_product_loja h3 {
+  margin: auto;
+}
+.container-loja-escolhida .sair_loja {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 70px;
+  height: 30px;
+  border-radius: 10px 0px 0px 0px;
+  border: none;
+  border-top: 2px solid;
+  border-left: 2px solid;
 }
 
 .teste_card {
