@@ -31,11 +31,12 @@
         <div class="user_header">
             @auth
             <span>Olá {{auth() -> user()->name}}!</span>
-            <a href="/lojas/controle">Suas lojas</a>
-            <form action="/logout" method="POST">
+            <a href="/lojas/controle">Acesse Suas lojas /</a>
+            <a href="/lojas/criarloja">Crie sua loja!</a>
+            {{-- <form action="/logout" method="POST">
                 @csrf
                 <button type="submit">Sair</button>
-            </form>
+            </form> --}}
             @else
             <a href="/register">Novo usuário</a>
             <a href="/login">Login</a>
@@ -51,6 +52,12 @@
     </div>
     <footer class="layout_footer">
         <h1>Packshop</h1>
+        @auth
+        <form action="/logout" method="POST">
+            @csrf
+            <button type="submit">Sair</button>
+        </form>    
+        @endauth
         <x-flash-message/>
     </footer>
     {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> --}}

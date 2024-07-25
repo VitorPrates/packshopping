@@ -91,12 +91,17 @@ html,body
         margin: auto;
         display: flex;
         align-items: center;
+        transition: 0.2s ease-out;
     }
     h1::before
     {
         content: "\00A9";
         margin: auto;
         vertical-align: auto;
+    }
+    form
+    {
+        margin: 0px 10px 0px 0px;
     }
 }
 
@@ -285,42 +290,45 @@ html,body
     border: 2px solid;
     gap: 5px;
     margin: 5px;
-    img
+    .loja_infos_index
     {
-        // display: inline;
-        width: calc(20% - 10px);
-        height: 100px;
-        border: 2px solid;
-    }
-    h1
-    {
-        // display: inline;
-        margin: 0px 0px auto 0px;
-        text-align: center;
-        // background-color: green;
-        width: 80%;
-        // margin: auto;
-    }
-    a
-    {
-        text-decoration: none;
-        color: black;
-    }
-    a:visited
-    {
-
-    }
-    ul
-    {
-        li
+        img
         {
-            border: 2px solid blue;
-            color: blue;
-            border-radius: 10px;
-            padding: 0px 3px;
+            // display: inline;
+            width: calc(20% - 10px);
+            height: 100px;
+            border: 2px solid;
+        }
+        h1
+        {
+            // display: inline;
+            margin: 0px 0px auto 0px;
+            text-align: center;
+            // background-color: green;
+            width: 80%;
+            // margin: auto;
+        }
+        a
+        {
+            text-decoration: none;
+            color: black;
+        }
+        a:visited
+        {
 
-            display: inline-block;
-            background-color: rgba(0, 255, 255, 0.356);
+        }
+        ul
+        {
+            li
+            {
+                border: 2px solid blue;
+                color: blue;
+                border-radius: 10px;
+                padding: 0px 3px;
+
+                display: inline-block;
+                background-color: rgba(0, 255, 255, 0.356);
+            }
         }
     }
 }

@@ -78,11 +78,15 @@ html, body {
   margin: auto;
   display: flex;
   align-items: center;
+  transition: 0.2s ease-out;
 }
 .layout_footer h1::before {
   content: "©";
   margin: auto;
   vertical-align: auto;
+}
+.layout_footer form {
+  margin: 0px 10px 0px 0px;
 }
 
 .index_pesquisa {
@@ -235,21 +239,21 @@ html, body {
   gap: 5px;
   margin: 5px;
 }
-.teste_card img {
+.teste_card .loja_infos_index img {
   width: calc(20% - 10px);
   height: 100px;
   border: 2px solid;
 }
-.teste_card h1 {
+.teste_card .loja_infos_index h1 {
   margin: 0px 0px auto 0px;
   text-align: center;
   width: 80%;
 }
-.teste_card a {
+.teste_card .loja_infos_index a {
   text-decoration: none;
   color: black;
 }
-.teste_card ul li {
+.teste_card .loja_infos_index ul li {
   border: 2px solid blue;
   color: blue;
   border-radius: 10px;

@@ -1,6 +1,6 @@
 <x-layout>
-    <a href="/lojas/criarloja">Crie sua loja!</a>
-    @include('partials._hero')  
+    
+    {{-- @include('partials._hero')   --}}
     @include('partials._search')
     @unless(count($listas) == 0)
     
