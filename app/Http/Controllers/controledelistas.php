@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use App\Http\Controllers\Controller;
+use App\Models\produtos;
 use Illuminate\Contracts\Session\Session;
 
 use function Laravel\Prompts\alert;
@@ -25,10 +26,11 @@ class controledelistas extends Controller
         ]);
     }
     //dentro da loja
-    public function show(listando $listando)
+    public function show(listando $listando, produtos $produtos)
     {
         return view("lojas.escolhido",[
-            'list' => $listando
+            'list' => $listando,
+            'product' => $produtos
         ]);
     }
     //to - do
@@ -36,6 +38,28 @@ class controledelistas extends Controller
     public function create()
     {
         return view('lojas.criarloja');
+    }
+    //criar produto
+    public function adicionarprodutos(listando $loja,  $loja_id)
+    {
+        return view('lojas.adicionarproduto',['info' => [listando::find($loja_id)->Titulo, $loja_id]]);
+    }
+    public function criarproduto(Request $req)
+    {
+        // dd($req);
+        $forms = $req -> validate([
+            'Titulo' => 'required',
+            'Preco' => 'required',
+        ]);
+        if($req['Descri'] == "")
+        {
+            $forms['Descri'] = "Sem descrição";
+        }
+        $form['loja_id'] = $req['loja_id'];
+        
+        produtos::create($forms);
+
+        return redirect('/lojas/controle')->with('message','Produto Adicionado!');
     }
 
 

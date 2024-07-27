@@ -18,6 +18,9 @@
                             <button type="submit">Apagar</button>
                         </form>
                     </td>
+                    <td>
+                        <a href="/select/{{$item->id}}/addproduct">Adiconar produtos</a>
+                    </td>
                 </tr>
                 @endforeach
             @else

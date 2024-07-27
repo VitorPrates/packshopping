@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\listando;
+use App\Models\produtos;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -22,6 +23,10 @@ class DatabaseSeeder extends Seeder
         listando::factory(6) -> create([
             'user_id' => $user-> id
         ]);
+        // produtos::factory(3) -> create([
+        //     'user_id' => 5
+        // ]);
+
         // listando::factory(6) -> create();
         // listando::create(
         //     [

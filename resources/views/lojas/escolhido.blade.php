@@ -10,7 +10,8 @@
                 <x-listando-tags-card :tagsCsv="$list->tags"/>
             </div>
             <div class="produtos_loja">
-                <x-loja-produto/>
+                <x-loja-produto :product=$product/>
+                <p>{{dd($product)}}</p>
             </div>
         </div>
         <button class="sair_loja" onclick="history.back()">Voltar</button>

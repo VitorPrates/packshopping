@@ -36,4 +36,8 @@ class listando extends Model
         // return $query -> where('title','like', '%'.request($query).'%');
         return LISTANDO::find(1);
     }
+    public function produtos()
+    {
+        return $this->hasMany(produtos::class,'loja_id');
+    }
 }

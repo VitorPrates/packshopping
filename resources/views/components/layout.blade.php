@@ -31,7 +31,8 @@
         <div class="user_header">
             @auth
             <span>Olá {{auth() -> user()->name}}!</span>
-            <a href="/lojas/controle">Acesse Suas lojas /</a>
+            <a href="/lojas/controle">Acesse Suas lojas</a>
+            <span>/</span>
             <a href="/lojas/criarloja">Crie sua loja!</a>
             {{-- <form action="/logout" method="POST">
                 @csrf

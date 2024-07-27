@@ -184,7 +184,7 @@ html,body
 
 .container-loja-escolhida
 {
-    background-color: rgb(255, 203, 197);
+    background-color: rgb(216, 216, 216);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -277,6 +277,25 @@ html,body
         border: none;
         border-top: 2px solid;
         border-left: 2px solid;
+    }
+}
+
+.form_addproduct
+{
+    padding: 10px;
+    border: 2px solid;
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    input
+    {
+        outline: 2px solid;
+        padding: 0px 7px;
+    }
+    .btns
+    {
+        margin: 3px 0px 0px 0px;
     }
 }
 
