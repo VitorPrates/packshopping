@@ -66,6 +66,9 @@ Route::get('/login',[UserController::class, 'login'])->name('login')->middleware
 //login user
 Route::post('/users/authenticate',[UserController::class, 'authenticate']);
 
+//vizualizando
+Route::get('/seeall',[controledelistas::class,'vizualizando']);
+
 
 Route::get('/heio', function () {
     return response("<h1>heio</hi>")

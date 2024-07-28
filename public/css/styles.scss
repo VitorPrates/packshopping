@@ -370,6 +370,29 @@ html,body
     }
 }
 
+.vizualizando_lojas
+{
+    width: 70%;
+    margin: 10px;
+    tr,th,td
+    {
+        border: 1px solid;
+    }
+}
+.vizalizando_usuarios
+{
+    width: 40%;
+    margin: 10px;
+    tr,th,td
+    {
+        border: 1px solid;
+    }
+    td
+    {
+        padding: 0px 10px;  
+    }
+}
+
 
 @media (max-width: 768px) {
     .teste_card {

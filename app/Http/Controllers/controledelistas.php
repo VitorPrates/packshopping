@@ -148,10 +148,17 @@ class controledelistas extends Controller
         return redirect('/') -> with('message', 'Loja deletada!');
     }
 
-    //controle de lojas
+    //controle de lojas individual
     public function controleLojas()
     {
         return view('lojas.controle',['info' => auth()->user()->lojas()->get()]);
     }
+
+    //vizualização geral
+    public function vizualizando()
+    {
+        return view('lojas.vizualizando', ['lojas' => listando::class, 'users' => User::all()]);
+    }
+
 }
 

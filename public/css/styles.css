@@ -294,6 +294,25 @@ html, body {
   padding: 2px 5px;
 }
 
+.vizualizando_lojas {
+  width: 70%;
+  margin: 10px;
+}
+.vizualizando_lojas tr, .vizualizando_lojas th, .vizualizando_lojas td {
+  border: 1px solid;
+}
+
+.vizalizando_usuarios {
+  width: 40%;
+  margin: 10px;
+}
+.vizalizando_usuarios tr, .vizalizando_usuarios th, .vizalizando_usuarios td {
+  border: 1px solid;
+}
+.vizalizando_usuarios td {
+  padding: 0px 10px;
+}
+
 @media (max-width: 768px) {
   .teste_card {
     flex: 1 1 100%; /* 1 card por linha em telas menores */
