@@ -1,6 +1,7 @@
 <x-layout>
-    <h1>Login</h1>
-    <form class="Register-form" action="/users/authenticate" method="POST">
+    
+    <form class="login-form" action="/users/authenticate" method="POST">
+        <h1>Login</h1>
         @csrf
         <label for="name">Nome</label>
         <input type="text" name="name" value="{{old('name')}}">

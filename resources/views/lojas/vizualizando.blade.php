@@ -1,4 +1,9 @@
 <x-layout>
+    @php
+        /*jkjl
+        asdas
+        asadad*/
+    @endphp
     <table class="vizualizando_lojas">
         <tr>
             <th colspan="2">Usuários com loja</th>

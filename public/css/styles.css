@@ -18,7 +18,9 @@ html, body {
 
 .layout_header {
   height: 50px;
-  border: 2px solid;
+  background-color: black;
+  color: white;
+  border: 2px solid black;
   display: flex;
   align-items: center;
   padding: 0px 30px;
@@ -50,14 +52,14 @@ html, body {
   display: flex;
 }
 .layout_header .user_header a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 .layout_header .user_header a:hover {
   text-decoration: underline;
 }
 .layout_header .user_header a:visited {
-  color: black;
+  color: white;
 }
 
 .layout_tela {
@@ -66,11 +68,14 @@ html, body {
   height: calc(100% - 100px);
   display: flex;
   flex-direction: column;
+  background-color: #F6F6F6;
 }
 
 .layout_footer {
+  background-color: black;
+  color: white;
   height: 50px;
-  border: 2px solid;
+  border: 2px solid black;
   display: flex;
   align-items: center;
 }
@@ -95,17 +100,17 @@ html, body {
   position: relative;
 }
 .index_pesquisa input {
-  border-radius: 50px;
+  border-radius: 0px 0px 8px 8px;
   min-height: 30px;
-  padding: 0px 10px;
+  padding: 10px 10px;
   font-size: 1em;
   outline: 2px solid;
   width: 80%;
 }
 .index_pesquisa button {
   position: absolute;
-  top: 5px;
-  right: 11%;
+  top: 14px;
+  right: 11.5%;
 }
 
 .form_criar_loja {
@@ -148,13 +153,84 @@ html, body {
 }
 
 .cards-index {
+  width: 950px;
+  margin: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+}
+
+.teste_card {
+  width: 300px;
+  min-height: 400px;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid;
+  gap: 5px;
+  margin: 5px;
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+  transition: 0.25s ease;
+}
+.teste_card img {
+  height: 150px;
+  border: 2px solid;
+  margin: 10px auto;
+}
+.teste_card .loja_infos_index h1 {
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  font-size: 1.7em;
+}
+.teste_card .loja_infos_index h2 {
+  width: 100%;
+  display: inline;
+  display: flex;
+  align-items: center;
+  margin: auto 0px 0px 0px;
+  padding: 0px 5px;
+  position: relative;
+  top: 21px;
+}
+.teste_card .loja_infos_index a {
+  text-decoration: none;
+  color: black;
+}
+.teste_card .loja_infos_index ul {
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  width: 100%;
+  padding: 0px 10px;
+  overflow-x: auto;
+  display: flex;
+  gap: 5px;
+}
+.teste_card .loja_infos_index ul li {
+  border-left: 2px solid;
+  border-right: 2px solid;
+  display: inline-block;
+  padding: 0px 3px;
+  transition: 0.1s ease-out;
+  margin: 0px;
+}
+.teste_card .loja_infos_index ul li:hover {
+  border-left: 2px solid red;
+  border-right: 2px solid red;
+  color: white;
+  padding: 0px 3px;
+  display: inline-block;
+  background-color: orangered;
+}
+
+.teste_card:hover {
+  box-shadow: 7px 7px 0px 1px #29C7D9;
 }
 
 .container-loja-escolhida {
-  background-color: rgb(216, 216, 216);
+  background-color: #F6F6F6;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -248,50 +324,31 @@ html, body {
   margin: 3px 0px 0px 0px;
 }
 
-.teste_card {
-  flex: 1 1 calc(50% - 16px);
-  display: flex;
-  flex-wrap: wrap;
-  border: 2px solid;
-  gap: 5px;
-  margin: 5px;
-}
-.teste_card .loja_infos_index img {
-  width: calc(20% - 10px);
-  height: 100px;
-  border: 2px solid;
-}
-.teste_card .loja_infos_index h1 {
-  margin: 0px 0px auto 0px;
-  text-align: center;
-  width: 80%;
-}
-.teste_card .loja_infos_index a {
-  text-decoration: none;
-  color: black;
-}
-.teste_card .loja_infos_index ul li {
-  border: 2px solid blue;
-  color: blue;
-  border-radius: 10px;
-  padding: 0px 3px;
-  display: inline-block;
-  background-color: rgba(0, 255, 255, 0.356);
-}
-
-.Register-form {
+.Register-form, .login-form {
   display: flex;
   flex-direction: column;
   padding: 10px;
   max-width: 300px;
   border: 2px solid;
   margin: auto;
+  font-size: 1.3em;
+  background-color: white;
+  box-shadow: -7px -7px 0px 2px #29C7D9;
+  border-radius: 10px;
 }
-.Register-form .btns {
+.Register-form .btns, .login-form .btns {
   margin: 5px;
 }
-.Register-form input {
+.Register-form input, .login-form input {
   padding: 2px 5px;
+  border: 2px solid;
+}
+.Register-form a:hover, .login-form a:hover {
+  text-decoration: underline;
+}
+
+.login-form {
+  box-shadow: 7px 7px 0px 2px #29C7D9;
 }
 
 .vizualizando_lojas {

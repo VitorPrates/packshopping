@@ -1,6 +1,6 @@
 <x-layout>
-    <h1>Novo usuário</h1>
     <form class="Register-form" action="/users" method="POST">
+        <h1>Novo usuário</h1>
         @csrf
         <label for="name">Nome</label>
         <input type="text" name="name" value="{{old('name')}}">

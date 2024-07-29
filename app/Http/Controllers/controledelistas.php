@@ -22,7 +22,8 @@ class controledelistas extends Controller
             //sem paginação
             // 'listas' => listando::latest()->filter(request(['tag','search']))->get()
             //com paginação
-            'listas' => listando::latest()->filter(request(['tag','search']))->simplePaginate(2)
+            // 'listas' => listando::latest()->filter(request(['tag','search']))->simplePaginate(2)
+            'listas' => listando::latest()->filter(request(['tag','search']))->simplePaginate(50)
         ]);
     }
     //dentro da loja
