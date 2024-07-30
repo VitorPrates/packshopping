@@ -44,7 +44,18 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-
+    public function scopefilter($query, array $filters)
+    {
+        if($filters['search'] ?? false)
+        {
+            $query -> where('name', 'like','%'.request('search').'%')
+            ->orwhere('id', 'like','%'.request('search').'%');
+        }
+        // if($filters['search'] ?? false)
+        // {
+        //     $query -> where('id', 'like','%'.request('search').'%');
+        // }
+    }
     //relações loja-user
     public function lojas()
     {

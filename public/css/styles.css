@@ -351,23 +351,73 @@ html, body {
   box-shadow: 7px 7px 0px 2px #29C7D9;
 }
 
+.container_vizualizacao {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+}
+
+.resultado_vizu {
+  width: 50%;
+  padding: 10px;
+}
+
+.filtro_vizu {
+  width: 50%;
+  padding: 10px;
+}
+
 .vizualizando_lojas {
-  width: 70%;
-  margin: 10px;
+  width: 100%;
 }
 .vizualizando_lojas tr, .vizualizando_lojas th, .vizualizando_lojas td {
   border: 1px solid;
+  padding: 0px 5px;
 }
 
 .vizalizando_usuarios {
-  width: 40%;
-  margin: 10px;
+  width: 100%;
+  display: inline-block;
+}
+.vizalizando_usuarios tbody {
+  width: 100%;
+  display: table;
 }
 .vizalizando_usuarios tr, .vizalizando_usuarios th, .vizalizando_usuarios td {
   border: 1px solid;
 }
 .vizalizando_usuarios td {
   padding: 0px 10px;
+}
+
+.tabela_vizualizacao {
+  width: 100%;
+  margin: 10px 0px 10px auto;
+  display: inline;
+}
+.tabela_vizualizacao tbody {
+  width: 100%;
+  display: table;
+}
+.tabela_vizualizacao tr, .tabela_vizualizacao th, .tabela_vizualizacao td {
+  border: 1px solid;
+}
+.tabela_vizualizacao td {
+  padding: 0px 10px;
+}
+.tabela_vizualizacao td .filto_pesquisa {
+  position: relative;
+}
+.tabela_vizualizacao td .filto_pesquisa input {
+  width: 95%;
+  padding: 0px 10px;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  outline: none;
+}
+.tabela_vizualizacao td .filto_pesquisa svg {
+  transform: translateX(10%) translateY(25%);
 }
 
 @media (max-width: 768px) {

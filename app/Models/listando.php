@@ -24,6 +24,7 @@ class listando extends Model
              ->orwhere('local', 'like','%'.request('search').'%')
              ->orwhere('tags', 'like','%'.request('search').'%');
         }
+
     }
 
     //relações loja-user

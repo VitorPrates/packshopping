@@ -156,9 +156,9 @@ class controledelistas extends Controller
     }
 
     //vizualização geral
-    public function vizualizando()
+    public function vizualizando(Request $request)
     {
-        return view('lojas.vizualizando', ['lojas' => listando::class, 'users' => User::all()]);
+        return view('lojas.vizualizando', ['lojas' => listando::class, 'users' => User::class, 'req'=> $request]);
     }
 
 }
