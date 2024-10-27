@@ -1,5 +1,8 @@
+@import url("~bootstrap/css/bootstrap.min.css");
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Imprima&display=swap');
+@tailwind components;
+@tailwind utilities;
 
 *
 {
@@ -140,20 +143,23 @@ html,body
     width: 50%;
     max-width: 400px;
     height: fit-content;
-    margin: auto;
+    margin: 20px auto;
     border: 2px solid;
     padding: 10px;
     font-size: 1.3em;
     gap: 5px;
     font-family: var(--font_regular_texts);
+    box-shadow: 7px 7px 0px 0px #29C7D9;
     input
     {
         width: 70%;
         padding: 3px;
+        border: 2px solid;
     }
     textarea
     {
         padding: 3px;
+        border: 2px solid;
     }
     .btns-form
     {
@@ -502,6 +508,19 @@ html,body
     }
 }
 
+.title_lista_lojas
+{
+    text-align: center;
+    background-color: red;
+}
+.lista_lojas
+{
+    
+    border: 1px solid;
+    width: 90%;
+    margin: 0px auto;
+    padding: 7px;
+}
 
 @media (max-width: 768px) {
     .teste_card {

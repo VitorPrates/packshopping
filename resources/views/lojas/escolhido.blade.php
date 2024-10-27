@@ -10,8 +10,7 @@
                 <x-listando-tags-card :tagsCsv="$list->tags"/>
             </div>
             <div class="produtos_loja">
-                <x-loja-produto :product=$product/>
-
+                <a href=""><x-loja-produto :product=$product/></a>
             </div>
         </div>
         <button class="sair_loja" onclick="history.back()">Voltar</button>

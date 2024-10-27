@@ -13,14 +13,15 @@ return new class extends Migration
     {
         Schema::create('product', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('loja_id')->constrained()->onDelete('cascade');
+            // $table->foreignId('loja_id')->constrained()->onDelete('set null');
+            $table->foreignId('loja_id')->references('id')->on('listas_tabela')->onDelete('cascade');
             $table->string('Titulo');
             $table->string('Preco');
             $table->string('Descri');
             $table->timestamps();
         });
     }
-
+    
     /**
      * Reverse the migrations.
      */

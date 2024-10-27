@@ -1,5 +1,5 @@
 <x-layout>
-    <h1>criar loja</h1>
+    {{-- <h1>criar loja</h1> --}}
     <form class="form_criar_loja" action="/loja/lojacriada" method="POST" enctype="multipart/form-data">
         @csrf
         <label for="">Nome da loja</label>

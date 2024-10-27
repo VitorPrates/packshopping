@@ -1,6 +1,9 @@
 @charset "UTF-8";
+@import url("~bootstrap/css/bootstrap.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Imprima&display=swap");
+@tailwind components;
+@tailwind utilities;
 * {
   margin: 0px;
   padding: 0px;
@@ -121,19 +124,22 @@ html, body {
   max-width: 400px;
   height: -moz-fit-content;
   height: fit-content;
-  margin: auto;
+  margin: 20px auto;
   border: 2px solid;
   padding: 10px;
   font-size: 1.3em;
   gap: 5px;
   font-family: var(--font_regular_texts);
+  box-shadow: 7px 7px 0px 0px #29C7D9;
 }
 .form_criar_loja input {
   width: 70%;
   padding: 3px;
+  border: 2px solid;
 }
 .form_criar_loja textarea {
   padding: 3px;
+  border: 2px solid;
 }
 .form_criar_loja .btns-form {
   width: 70%;
@@ -418,6 +424,18 @@ html, body {
 }
 .tabela_vizualizacao td .filto_pesquisa svg {
   transform: translateX(10%) translateY(25%);
+}
+
+.title_lista_lojas {
+  text-align: center;
+  background-color: red;
+}
+
+.lista_lojas {
+  border: 1px solid;
+  width: 90%;
+  margin: 0px auto;
+  padding: 7px;
 }
 
 @media (max-width: 768px) {

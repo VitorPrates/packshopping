@@ -1,10 +1,10 @@
 <x-layout>
     <table class="lista_lojas">
+        
         <tbody>
-            <tr>
-                <th>Controle de lojas</th>
-            </tr>
-            
+                <tr>
+                    <th colspan="4">Controle de lojas</th>
+                </tr>
                 @unless ($info -> isEmpty())
                 @foreach ($info as $item)
                 <tr>

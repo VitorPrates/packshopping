@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'João Moe',
             'email' => 'joao@gmail.com'
         ]);
-        listando::factory(6) -> create([
+        listando::factory(2) -> create([
             'user_id' => $user-> id
         ]);
         // produtos::factory(3) -> create([

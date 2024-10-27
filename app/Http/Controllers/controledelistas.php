@@ -41,30 +41,10 @@ class controledelistas extends Controller
         return view('lojas.criarloja');
     }
     //criar produto
-    public function adicionarprodutos(listando $loja,  $loja_id)
-    {
-        return view('lojas.adicionarproduto',['info' => [listando::find($loja_id)->Titulo, $loja_id]]);
-    }
-    public function criarproduto(Request $req)
-    {
-        // dd($req);
-        $forms = $req -> validate([
-            'Titulo' => 'required',
-            'Preco' => 'required',
-        ]);
-        if($req['Descri'] == "")
-        {
-            $forms['Descri'] = "Sem descrição";
-        }
-        $form['loja_id'] = $req['loja_id'];
-        
-        produtos::create($forms);
-
-        return redirect('/lojas/controle')->with('message','Produto Adicionado!');
-    }
+    
 
 
-    //armazenar - loja criada - sotre
+    //armazenar - loja criada - store
     public function lojacriada(Request $request)
     {
         $formFields = $request -> validate([

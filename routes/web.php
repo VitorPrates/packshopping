@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\controledelistas;
+use App\Http\Controllers\produtosControler;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -27,6 +28,7 @@ Route::get('/', [controledelistas::class,'index']);
 //         abort(404);
 //     }
 // });
+
 Route::post('/loja/lojacriada',[controledelistas::class,'lojacriada']);
 
 
@@ -36,8 +38,10 @@ Route::get("/select/{listando}", [controledelistas::class, 'show']);
 //controle de lojas
 Route::get('/lojas/controle',[controledelistas::class,'controleLojas'])->middleware('auth');
 
-Route::get("/select/{loja_id}/addproduct",[controledelistas::class,'adicionarprodutos']);
-Route::post("/testeadd",[controledelistas::class,'criarproduto']);
+Route::get("/select/{loja_id}/addproduct",[produtosControler::class,'adicionarprodutos']);
+
+//criação de produtos
+Route::post("/testeadd/{loja_id}",[produtosControler::class,'criarproduto']);
 
 //formulário de criação
 Route::get('/lojas/criarloja', [controledelistas::class,'create'])->middleware('auth');

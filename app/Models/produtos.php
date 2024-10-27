@@ -9,6 +9,11 @@ class produtos extends Model
 {
     use HasFactory;
     protected $table = 'product';
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
     protected $fillable = ['loja_id','Titulo', 'Preco', 'Descri'];
     public function loja()
     {
