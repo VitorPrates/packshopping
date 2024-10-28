@@ -12,11 +12,16 @@ class produtos extends Model
     /**
      * The attributes that are mass assignable.
      *
-     * @var array<int, string>
+     * @var array<int, string> 
      */
     protected $fillable = ['loja_id','Titulo', 'Preco', 'Descri'];
     public function loja()
     {
         return $this->belongsTo(listando::class,'loja_id');
+    }
+    public function scopebuscarLoja($query)
+    {
+        // return $query -> where('title','like', '%'.request($query).'%');
+        return produtos::find(1);
     }
 }

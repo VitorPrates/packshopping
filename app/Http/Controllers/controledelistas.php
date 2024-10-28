@@ -31,7 +31,7 @@ class controledelistas extends Controller
     {
         return view("lojas.escolhido",[
             'list' => $listando,
-            'product' => $produtos
+            'product' => $produtos::all()
         ]);
     }
     //to - do

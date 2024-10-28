@@ -24,11 +24,23 @@ class produtosControler extends Controller
         {
             $forms['Descri'] = "null";
         }
+        else
+        {
+            $forms['Descri'] = $req['Descri'];
+        }
         $forms['loja_id'] = $req['loja_id'];
         
         
         produtos::create($forms);
 
         return redirect('/lojas/controle')->with('message','Produto Adicionado!');
+    }
+    public function exibir_produtos(Request $req, produtos $produto, listando $loja)
+    {
+        // dd($req["product_id"]);
+        return view("lojas.produto-view",[
+            'produto' => $produto::find($req["product_id"]),
+            'loja' => $loja::find($produto::find($req["product_id"])['loja_id']) 
+        ]);
     }
 }

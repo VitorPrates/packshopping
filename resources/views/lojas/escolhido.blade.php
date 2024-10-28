@@ -10,11 +10,19 @@
                 <x-listando-tags-card :tagsCsv="$list->tags"/>
             </div>
             <div class="produtos_loja">
-                <a href=""><x-loja-produto :product=$product/></a>
+                <ul>
+                    @foreach ($product as $produto)
+                        @if ($list -> id == $produto->loja_id)
+                            <li><a href="/produto/{{$produto->id}}/"><x-loja-produto :product=$produto/></a></li>    
+                        @endif
+                    @endforeach
+                </ul>
+                
+                {{-- <h1>{{dd($product[0])}}</h1> --}}
             </div>
         </div>
         <button class="sair_loja" onclick="history.back()">Voltar</button>
-    </div>
+    </div> 
     {{-- <a href="/select/{{$list -> id}}/edit"><i class="fa-solid fa-pencil"></i>editar</a>
     <form method="POST" action="/select/{{$list->id}}">
         @csrf

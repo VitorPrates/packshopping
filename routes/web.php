@@ -43,6 +43,9 @@ Route::get("/select/{loja_id}/addproduct",[produtosControler::class,'adicionarpr
 //criação de produtos
 Route::post("/testeadd/{loja_id}",[produtosControler::class,'criarproduto']);
 
+//Exibição de produtos
+Route::get("/produto/{product_id}/",[produtosControler::class,'exibir_produtos']);
+
 //formulário de criação
 Route::get('/lojas/criarloja', [controledelistas::class,'create'])->middleware('auth');
 
