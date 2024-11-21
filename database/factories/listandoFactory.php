@@ -17,7 +17,7 @@ class listandoFactory extends Factory
     public function definition(): array
     {
         return [
-            'Titulo' => $this -> faker -> sentence(),
+            'Titulo' => $this -> faker -> name(),
             'tags' => 'laravel, api, backend, toasts',
             'empresa' => $this -> faker -> company(),
             'email' => $this -> faker -> companyEmail(),

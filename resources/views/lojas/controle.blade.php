@@ -1,6 +1,5 @@
 <x-layout>
     <table class="lista_lojas">
-        
         <tbody>
                 <tr>
                     <th colspan="4">Controle de lojas</th>
@@ -8,8 +7,8 @@
                 @unless ($info -> isEmpty())
                 @foreach ($info as $item)
                 <tr>
-                    <td>{{$item -> Titulo}}</td>
-                    {{-- <td>{{$item -> user_id}}</td> --}}
+                    <td><a href="/select/{{$item -> id}}">{{$item -> Titulo}}</a></td>
+                    
                     <td><a href="/select/{{$item -> id}}/edit">Editar</a></td>
                     <td>
                         <form action="/select/{{$item->id}}" method="POST">
